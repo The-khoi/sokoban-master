@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6, type: 3}
+  m_Name: Character_001_TimeKeeper
+  m_EditorClassIdentifier: 
+  characterId: 1
+  characterName: "\u661F\u91CE\u672A\u6765"
+  description: "\u62E5\u6709\u65F6\u95F4\u56DE\u6EAF\u80FD\u529B\u3002\u64C4\u6D88\u6700\u8FD13\u6B65\u64CD\u4F5C\uFF0C\u7528\u4E8E\u9AD8\u5BB9\u9519\u8BD5\u8BD5\u3002"
+  moveSpeedMultiplier: 1
+  canPushBoxes: 1
+  visualPrefab: {fileID: 565640940072402196, guid: ea7d14d16042e2243b2257bd3de3ce0a, type: 3}
+  portraitIcon: {fileID: 0}
+  skills:
+  - skillType: 1
+    skillPrefab: {fileID: 1393744412750969679, guid: 92f309ad0b0c0374c87422470d4c51ea, type: 3}
+    unlockedByDefault: 1
+    customEnergyCost: 1
