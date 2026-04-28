@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6, type: 3}
+  m_Name: Character_002_IceFreeze
+  m_EditorClassIdentifier: 
+  characterId: 2
+  characterName: "\u51DB\u51AC\u9759"
+  description: "\u5C06\u4E00\u4E2A\u52A8\u6001\u7BB1\u5B50\u8F6C\u53D8\u4E3A\u9759\u6001\u5730\u5F62\uFF0C\u7528\u4E8E\u9694\u79BB\u5FC3\u9B54\u6216\u586B\u5751\u3002"
+  moveSpeedMultiplier: 1
+  canPushBoxes: 1
+  visualPrefab: {fileID: 6668035787399893580, guid: 098adf0517eff9b47bc30e1bad151a3e, type: 3}
+  portraitIcon: {fileID: 0}
+  skills:
+  - skillType: 2
+    skillPrefab: {fileID: 3580346976787353445, guid: 525d56cbaa80e5d4aaad14e7e84a8404, type: 3}
+    unlockedByDefault: 1
+    customEnergyCost: 2
