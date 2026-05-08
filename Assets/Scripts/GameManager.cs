@@ -33,7 +33,19 @@ public class GameManager: MonoBehaviour
 
     private void OnEnable()
     {
-        levelLoader.OnLevelLoaded += OnLevelLoaded;
+        // [Echoes Mod]: 若 Inspector 未赋值，先自动查找（OnEnable 早于 Awake，需在此处补全引用）
+        if (levelLoader == null)
+        {
+            levelLoader = FindObjectOfType<Level.LevelLoader>();
+            if (levelLoader != null)
+                Debug.Log("[GameManager] LevelLoader 已通过 FindObjectOfType 自动绑定。");
+            else
+                Debug.LogError("[GameManager] 场景中找不到 LevelLoader，请确认场景配置。");
+        }
+
+        if (levelLoader != null)
+            levelLoader.OnLevelLoaded += OnLevelLoaded;
+
         _pauseMenuController = FindObjectOfType<PauseMenuController>();
     }
     
