@@ -106,6 +106,17 @@ namespace Echoes.Characters
             if (_player != null)
             {
                 _visualAnchor = _player.VisualAnchor;
+                
+                // [Echoes Mod - Bug Fix]: 每次设置新玩家时，重新应用当前角色的视觉
+                // 解决换关后角色消失的问题
+                if (currentCharacter != null)
+                {
+                    ApplyVisual(currentCharacter);
+                    InstantiateSkills(currentCharacter);
+                    
+                    // 通知玩家更新数据
+                    _player.SetCharacterData(currentCharacter);
+                }
             }
         }
         

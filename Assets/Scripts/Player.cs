@@ -36,22 +36,44 @@ public class Player: Movable
     /// </summary>
     public Animator CurrentAnimator => _currentAnimator;
 
+    // [Echoes Mod]: 动画停止协程引用
+    private Coroutine _stopAnimationCoroutine;
+    
     public override void Move(Vector3 direction, float distance, bool force = false)
     {
         base.Move(direction, distance, force);
         
-        // [Echoes Mod]: 使用当前 Animator（可能为 null，由 CharacterManager 设置）
+        // [Echoes Mod - Bug Fix]: 每次移动都更新方向参数并触发动画
         if (_currentAnimator != null)
         {
-            _currentAnimator.SetBool(isMovingParameter, false);
-            _isAnimating = false;
-            
+            // 更新方向参数（关键：每次移动都必须更新）
             _currentAnimator.SetFloat(moveXParameter, direction.x);
             _currentAnimator.SetFloat(moveYParameter, direction.y);
             
+            // 触发移动动画
             _currentAnimator.SetBool(isMovingParameter, true);
             _isAnimating = true;
+            
+            // 停止之前的停止动画协程（如果有）
+            if (_stopAnimationCoroutine != null)
+            {
+                StopCoroutine(_stopAnimationCoroutine);
+            }
+            
+            // 启动新的停止动画协程
+            _stopAnimationCoroutine = StartCoroutine(StopAnimationAfterDelay(0.15f));
         }
+    }
+    
+    /// <summary>
+    /// [Echoes Mod]: 延迟停止动画协程
+    /// 移动是瞬时的，但动画需要短暂播放后停止
+    /// </summary>
+    private System.Collections.IEnumerator StopAnimationAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StopAnimation();
+        _stopAnimationCoroutine = null;
     }
     
     public void StopAnimation()

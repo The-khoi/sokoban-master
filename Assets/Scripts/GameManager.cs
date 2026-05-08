@@ -117,7 +117,8 @@ public class GameManager: MonoBehaviour
         {
             characterManager.SetPlayer(playerComponent);
             
-            // 应用移动速度乘区
+            // 应用移动速度乘区（注意：避免重复订阅事件）
+            characterManager.OnCharacterChanged -= OnCharacterChanged;
             characterManager.OnCharacterChanged += OnCharacterChanged;
             
             // 初始化默认角色（如果尚未设置）

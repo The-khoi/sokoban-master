@@ -47,5 +47,7 @@ MonoBehaviour:
   skillName: "\u51B0\u5C01\u56FA\u5316"
   energyCost: 2
   isUnlocked: 1
-  freezeRange: 1.5
   freezeEffectPrefab: {fileID: 0}
+  boxLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295

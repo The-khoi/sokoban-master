@@ -18,7 +18,7 @@ MonoBehaviour:
   moveSpeedMultiplier: 1
   canPushBoxes: 1
   visualPrefab: {fileID: 565640940072402196, guid: ea7d14d16042e2243b2257bd3de3ce0a, type: 3}
-  portraitIcon: {fileID: 0}
+  portraitIcon: {fileID: 21300000, guid: 4c837be7c3cfa3a40a9eef65a69d9f27, type: 3}
   skills:
   - skillType: 1
     skillPrefab: {fileID: 1393744412750969679, guid: 92f309ad0b0c0374c87422470d4c51ea, type: 3}
