@@ -7,5 +7,15 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: IceFreeze_Animator
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 3c9715f14b9ad584f84c6cba502c69d0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0df7800be4d77b04299e9f94006056e7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bd51aaea78284dd498ff9742bff0a5bc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dbb1c7ff5e0c0ec489b6999f9e243b56, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 283db741716cda2478da7fbd8bbc47dc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 789975396bd71af4f83a98e26e6a57a9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 25432312e443f27438393e545ee8d7a8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f4bd237b31de78948999f2d759a9353c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 216b8c78fb0f939429f054bf06fbc12d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 71704a932e476b4478c2f39418379c62, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ebcd43d6665a0ac47a2ba6b5516a1baf, type: 2}
