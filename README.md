@@ -22,6 +22,24 @@ Unity 推箱子项目。开发方向与改造约定见[项目规范](.kiro/steer
 - [Assets/Scripts/](Assets/Scripts/)：基础脚本；可从 [MainMenuController.cs](Assets/Scripts/UI/MainMenuController.cs) 的开始游戏回调和 [PlayerMovementController.cs](Assets/Scripts/PlayerMovementController.cs) 的移动输入回调阅读。
 - [Assets/Scripts_Echoes/](Assets/Scripts_Echoes/)：扩展脚本目录。
 
+## 基础键盘操作
+
+以下按键来自 [sokoban.inputactions](Assets/Resources/Player/sokoban.inputactions) 的 `Player` 动作映射，已与对应输入回调核对：
+
+| 操作 | 按键 | 动作名 |
+| --- | --- | --- |
+| 向上移动 | W / ↑ | `MoveUp` |
+| 向下移动 | S / ↓ | `MoveDown` |
+| 向左移动 | A / ← | `MoveLeft` |
+| 向右移动 | D / → | `MoveRight` |
+| 撤销 | U | `Undo` |
+| 重做 | R | `Redo` |
+| 暂停 / 继续 | Esc | `Pause` |
+
+移动回调见 [PlayerMovementController.cs](Assets/Scripts/PlayerMovementController.cs)，撤销与重做回调见 [GameController.cs](Assets/Scripts/GameController.cs)，暂停与继续回调见 [PauseMenuController.cs](Assets/Scripts/UI/PauseMenuController.cs)。
+
+以上仅确认输入配置与源码中的对应关系；场景中的事件接线和实际按键效果仍需在 Unity 中验证。
+
 ## 依赖与验证状态
 
 当前依赖清单包含 URP **14.0.8**、Input System **1.7.0** 和通过 Git 引用的 Unity MCP 包；完整配置见 [manifest.json](Packages/manifest.json)。
